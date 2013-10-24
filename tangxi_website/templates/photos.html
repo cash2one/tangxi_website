@@ -1,0 +1,31 @@
+{% extends "includes/base_info_page.html"%}
+
+{% block main %}
+<div id="banner-img">
+	<img src="/static/img/banner-stairway.png" alt="">
+</div>
+<div id="info_block">
+	<div class="centered-body">
+		<div class="info-container">
+			<div id="myCarousel" class="carousel slide">
+				<div class="carousel-inner">
+					{% for img in imgs %}
+					{% if forloop.first %}
+					<div class="item active">
+					{% else %}
+					<div class="item">
+					{% endif %}
+						<img src="{{img_url}}{{img.path.name}}" alt>
+						<div class="carousel-caption">
+							<h4>{{ img.title }}</h4>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<a href="#myCarousel" class="left carousel-control" data-slide="prev"><</a>
+				<a href="#myCarousel" class="right carousel-control" data-slide="next">></a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock main %}

@@ -1,0 +1,38 @@
+<div id="menu">
+	 <ul>
+		 <li class="first-menu" {% if active_menu == '/home/' %} id="current_menu_item" {% endif %}>
+		  <a href="/home/"><p>首页</p><span>HOME</span></a>
+		 </li>
+		 <li {% if active_menu == '/services/' %} id="current_menu_item" {% endif %} class="dropdown">
+			<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#"><p>服务项目</p><span>SERVICES</span><b class="caret"></b></a>
+			<ul id="submenu" class="dropdown-menu">
+				<li role="presentation">
+					<a href="/services/foot_massage" role="menuitem" tabindex="1">足疗</a>
+				</li>
+				<li role="presentation">
+					<a href="/services/billiard" role="menuitem" tabindex="2">台球</a>
+				</li>
+				<li role="presentation">
+					<a href="/services/card" role="menuitem" tabindex="3">棋牌</a>
+				</li>
+
+				<li role="presentation">
+					<a href="/services/tea" role="menuitem" tabindex="4">茶艺</a>
+				</li>
+				<li role="presentation">
+					<a href="/services/spa" role="menuitem" tabindex="5">SPA</a>
+				</li>
+			</ul>
+		</li>
+		 <li {% if active_menu == '/news/' %} id="current_menu_item" {% endif %}>
+		  <a href="/news/"><p>近期新闻</p><p>NEWS</p></a>
+		 </li>
+		 <li {% if active_menu == '/company_culture/' %} id="current_menu_item" {% endif %}>
+		  <a href="/company_culture/"><p>品牌文化</p><p>CULTURE</p></a>
+		 </li>
+		 <li {% if active_menu == '/contact/' %} id="current_menu_item" {% endif %}>
+		  <a href="/contact/"><p>联系我们</p><p>CONTACT</p></a>
+		 </li>
+		 </li>
+	 </ul>
+</div>

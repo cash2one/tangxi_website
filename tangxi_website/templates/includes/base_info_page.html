@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> 唐玺会馆</TITLE>
+	{% include 'includes/css.html' %}
+	{% include "includes/js.html" %}
+</HEAD>
+<BODY>
+<div id="top-panel">
+	<div id="top-container">
+		<div id="logo"></div>
+		<div id="hot-line">服务热线：400-XXX-XXX</div>
+		<div id="navi">
+			{% include 'includes/menu.html' %}
+		</div>
+	</div>
+</div>
+<div id="main" class="centered">
+	{% block main %}{% endblock main %}
+</div>
+{% include 'includes/footer.html' %}
+</BODY>
+</HTML>

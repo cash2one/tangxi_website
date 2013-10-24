@@ -1,0 +1,155 @@
+# -*- coding: utf-8 -*- 
+from django.shortcuts import render_to_response, get_object_or_404
+from django.http import HttpResponse, Http404
+from django.http import HttpResponseRedirect
+from django.core.paginator import Paginator,InvalidPage,EmptyPage,PageNotAnInteger
+from tangxi_webapp.models import *
+from tangxi_website.settings import *
+from django.core.context_processors import csrf
+from django.core.mail import send_mail
+import sys
+
+default_encoding = 'utf-8'
+if sys.getdefaultencoding() != default_encoding:
+    reload(sys)
+    sys.setdefaultencoding(default_encoding)
+		
+
+#=======================================
+# Function APIs:
+#---------------------------------------
+def show_enter_page(request):
+	'''
+	/
+	a beatiful entrance page
+	'''
+	return render_to_response('home.html',{})
+
+def show_home_page(request):
+	'''
+	'''
+	return render_to_response('home.html',{'active_menu':'/home/'})
+
+def show_news_page(request, page_number=1):
+	'''
+	'''
+	news = Activity.objects.all().order_by('-date')
+	p = Paginator(news, 3)
+	page = p.page(page_number)
+	news_in_page = page.object_list
+	context = {
+		'active_menu':'/news/',
+		'news':news_in_page,
+		'page':page,
+		'paginator':p
+	}
+	return render_to_response('news.html', context)
+
+#id is numeric
+def show_news_detail_page(request, news_id):
+	'''
+	'''
+	news_detail = get_object_or_404(Activity, id=news_id)
+	return render_to_response('news_detail.html',{'active_menu':'/news/', 'news_detail':news_detail})
+
+def show_company_culture_page(request):
+	'''
+	'''
+	img_url = MEDIA_URL
+	imgs = Images.objects.all()[:4]
+	context = {
+		'active_menu':'/company_culture/',
+		'img_url':img_url,
+		'imgs':imgs
+	}
+	return render_to_response('company_culture.html', context)
+
+def show_services_page(request, service_name=''):
+	'''
+	'''
+	img_url = ''
+	description = ''
+	if service_name == '':
+		return render_to_response('services.html',{'active_menu':'/services/'})
+	try:
+		img = Images.objects.get(title=service_name)
+		img_url = MEDIA_URL + img.path.name
+		service_profile = ServiceProfile.objects.get(name=service_name)
+		description = service_profile.description
+	except Images.DoesNotExist, ServiceProfile.DoesNotExist:
+		pass
+	slide_img_url = MEDIA_URL
+	imgs = Images.objects.all()
+	context = {
+		'active_menu':'/services/',
+		'service_display_name': service_name,
+		'img_url':img_url,
+		'description':description,
+		'slide_img_url':slide_img_url, 
+		'imgs':imgs
+	}
+	return render_to_response('services_detail.html', context)
+
+def show_contact_page(request):
+	'''
+	'''
+	c = {'active_menu':'/contact/'}
+	c.update(csrf(request))
+	if request.method == 'POST':
+		name = request.POST['name']
+		contact_info = request.POST['contact']
+		msg = request.POST['message']
+		content = 'name: %s, contact information: %s, message: %s.' % (name, contact_info, msg)
+		#send_mail(
+		#	'customer feedback',
+		#	content,
+		#	'lnhote@gmail.com',
+		#	['lnhote@gmail.com'],
+		#)
+		return HttpResponseRedirect('/thanks/')
+	return render_to_response('contact.html', c)
+
+def show_contact_thanks_page(request):
+	return render_to_response('thanks.html', {})
+
+def show_join_us_page(request, page_number=1):
+	'''
+	'''
+	jobs = Jobs.objects.all().order_by('-date')
+	p = Paginator(jobs, 3)
+	page = p.page(page_number)
+	jobs_in_page = page.object_list
+	context = {
+		'jobs':jobs_in_page,
+		'page':page,
+		'paginator':p
+	}
+	return render_to_response('join_us.html', context)
+
+def show_example_page(request):
+	'''
+	'''
+	return render_to_response('example.html', {})
+
+
+def show_about_page(request):
+	'''
+	/about/
+	show the about page
+	'''
+	return render_to_response('about.html',{'active_menu':'/about/'}) 
+
+def show_photos_page(request):
+	'''
+	'''
+	img_url = MEDIA_URL
+	imgs = Images.objects.all()
+	context = {
+		'img_url': img_url,
+		'imgs':imgs
+	}
+	return render_to_response('photos.html', context) 
+
+#=======================================
+# Function API End Here.
+#---------------------------------------
