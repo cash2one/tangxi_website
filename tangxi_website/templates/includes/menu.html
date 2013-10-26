@@ -1,10 +1,10 @@
 <div id="menu">
 	 <ul>
 		 <li class="first-menu" {% if active_menu == '/home/' %} id="current_menu_item" {% endif %}>
-		  <a href="/home/"><p>首页</p><span>HOME</span></a>
+		  <a href="/home/"><p>首页</p><p>HOME</p></a>
 		 </li>
 		 <li {% if active_menu == '/services/' %} id="current_menu_item" {% endif %} class="dropdown">
-			<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#"><p>服务项目</p><span>SERVICES</span><b class="caret"></b></a>
+			<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#"><p>服务项目</p><p>SERVICES</p><b class="caret"></b></a>
 			<ul id="submenu" class="dropdown-menu">
 				<li role="presentation">
 					<a href="/services/foot_massage" role="menuitem" tabindex="1">足疗</a>
