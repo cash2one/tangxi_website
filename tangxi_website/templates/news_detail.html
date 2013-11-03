@@ -2,7 +2,7 @@
 
 {% block main %}
 <div id="banner-img">
-	<img src="/static/img/banner2.jpg" alt="">
+	<img src="/static/img/banner_news.jpg" alt="">
 </div>
 <div id="info_block">
 	<div class="centered-body">
@@ -10,8 +10,8 @@
 		</div>
 		<div class="info-container">
 			<h4>{{ news_detail.name }}</h4>
-			<p>活动日期: {{ news_detail.date }}</p>
-			<p>活动内容: {{ news_detail.description }}</p>
+			<p>{{ news_detail.date }}</p>
+			<p>详情：{{ news_detail.description }}</p>
 			<p><a href="/news/"><b class="back-caret"></b>返回</a></p>
 		</div>
 	</div>

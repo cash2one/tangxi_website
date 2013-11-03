@@ -74,6 +74,12 @@ STATIC_ROOT = os.path.join(os.path.dirname(__file__),"static")
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
+EMAIL_HOST_USER = 'tangxihuiguan@qq.com'
+EMAIL_HOST_PASSWORD = 'tangxihuiguan'
+EMAIL_HOST = 'smtp.qq.com' #'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".

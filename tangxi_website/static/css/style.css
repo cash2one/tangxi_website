@@ -37,7 +37,7 @@ Layout
 			position: relative;
 			width: 200px;
 			height: 115px;
-			background-image: url('/static/img/logo.png');
+			background-image: url('/static/img/logo.jpg');
 		}
 		#hot-line {
 			float: left;
@@ -97,6 +97,9 @@ Layout
 	font-family: "Times New Roman", Times, serif;
 	font-size: 1.2em;
 }
+#info_block h4 {
+	font-family: "Times New Roman", Times, serif;
+}
 #info_block a {
 	color: #ff9933;
 }
@@ -119,6 +122,9 @@ Layout
 .info-container h4 {
 	margin-left: 20px;
 	margin-top: 20px;
+}
+.info-container p {
+	margin: 10px;
 }
 #bottom-img-slides {
 	height: 200px;

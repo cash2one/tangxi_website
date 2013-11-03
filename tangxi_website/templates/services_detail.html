@@ -2,7 +2,7 @@
 
 {% block main %}
 <div id="banner-img">
-	<img src="/static/img/banner-service.jpg" alt="">
+	<img src="/static/img/{{banner_img}}" alt="">
 </div>
 <div id="info_block">
 	<div class="centered-body">
@@ -26,16 +26,19 @@
 			</ul>
 		</div>
 		<div class="info-container">
-			<h4>服务名称：{{service_display_name}}</h4>
-			<p>服务介绍：{{description}}</p>
+			<h4>{{service_display_name}}</h4>
+			{% autoescape off %}
+				{{description}}
+			{% endautoescape %}
+			
 		</div>
 	</div>
 </div>
 <div id="bottom-img-slides">
 	<div class="centered-body">
-		<div class="img-frame"><img src="/static/img/foot-massage1.jpg"/><p>足疗1</p></div>
-		<div class="img-frame"><img src="/static/img/foot-massage2.jpg"/><p>足疗1</p></div>
-		<div class="img-frame"><img src="/static/img/foot-massage3.jpg"/><p>足疗1</p></div>
+		{% for img in imgs %}
+			<div class="img-frame"><img src="/static/img/{{img}}"/><p></p></div>
+		{% endfor %}
 	</div>
 </div>
 {% endblock main %}

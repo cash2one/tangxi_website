@@ -64,6 +64,13 @@ def show_company_culture_page(request):
 	}
 	return render_to_response('company_culture.html', context)
 
+service_dictionary = {}
+service_dictionary['foot_massage'] = u'足疗按摩'
+service_dictionary['tea'] = u'茶道'
+service_dictionary['card'] = u'棋牌'
+service_dictionary['spa'] = u'SPA'
+service_dictionary['billiard'] = u'台球'
+
 def show_services_page(request, service_name=''):
 	'''
 	'''
@@ -75,17 +82,20 @@ def show_services_page(request, service_name=''):
 		img = Images.objects.get(title=service_name)
 		img_url = MEDIA_URL + img.path.name
 		service_profile = ServiceProfile.objects.get(name=service_name)
+		service_display_name = service_dictionary[service_name]
 		description = service_profile.description
 	except Images.DoesNotExist, ServiceProfile.DoesNotExist:
 		pass
-	slide_img_url = MEDIA_URL
-	imgs = Images.objects.all()
+	banner_img = "banner_%s.jpg" % (service_name)
+	imgs = []
+	for x in xrange(1,4):
+		imgs.append("%s_%d.jpg" % (service_name, x))
 	context = {
 		'active_menu':'/services/',
-		'service_display_name': service_name,
+		'service_display_name': service_display_name,
 		'img_url':img_url,
 		'description':description,
-		'slide_img_url':slide_img_url, 
+		'banner_img':banner_img, 
 		'imgs':imgs
 	}
 	return render_to_response('services_detail.html', context)
@@ -99,13 +109,13 @@ def show_contact_page(request):
 		name = request.POST['name']
 		contact_info = request.POST['contact']
 		msg = request.POST['message']
-		content = 'name: %s, contact information: %s, message: %s.' % (name, contact_info, msg)
-		#send_mail(
-		#	'customer feedback',
-		#	content,
-		#	'lnhote@gmail.com',
-		#	['lnhote@gmail.com'],
-		#)
+		content = '姓名: %s\n联系方式: %s\n留言: \n%s' % (name, contact_info, msg)
+		send_mail(
+			'客户留言反馈', # subject
+			content, # message
+			EMAIL_HOST_USER, # from email
+			[EMAIL_HOST_USER], # recipient_list
+		)
 		return HttpResponseRedirect('/thanks/')
 	return render_to_response('contact.html', c)
 
