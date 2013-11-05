@@ -16,7 +16,7 @@ SQLITE_DB_PATH = os.path.join(CURRENT_PATH, 'database/sqlite.db')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/database/sqlite.db',                      # Or path to database file if using sqlite3.
+        'NAME': SQLITE_DB_PATH,                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
