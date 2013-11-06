@@ -17,7 +17,8 @@
 			</li>
 			{% endfor %}
 			</ul>
-			<div id="page-list">
+		</div>
+		<div id="page-list">
 			<p>
 			{% if page.has_previous %}
 				<a href="/news/{{ page.previous_page_number }}/"><span>上一页</span></a>
@@ -41,7 +42,6 @@
 			<span>第 {{ page.number }} 页</span> <span>共 {{ paginator.num_pages }} 页</span>
 			</p>
 			</div>
-		</div>
 	</div>
 </div>
 {% endblock main %}

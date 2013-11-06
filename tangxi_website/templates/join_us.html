@@ -10,16 +10,18 @@
 		<div class="info-container">
 			<h4>唐玺会馆招聘信息！</h4>
 			<ul>
-			{% for job in jobs %}
+				{% for job in jobs %}
 				<li>
 				<p>{{job.title}} {{ job.quantity }}名:</p>
 				<p>发布日期： {{ job.date }} </p>
 				<p>要求：{{ job.description}} </p>
 				<br/>
 				</li>
-			{% endfor %}
+				{% endfor %}
 			</ul>
-			<div id="page-list">
+			
+		</div>
+		<div id="page-list">
 			<p>
 			{% if page.has_previous %}
 				<a href="/join_us/{{ page.previous_page_number }}/"><span>上一页</span></a>
@@ -42,7 +44,6 @@
 			{% endif %}
 			<span>第 {{ page.number }} 页</span> <span>共 {{ paginator.num_pages }} 页</span>
 			</p>
-			</div>
 		</div>
 	</div>
 </div>

@@ -27,16 +27,12 @@ Layout
 */
 #top-panel {
 	height: 115px;
+	min-width: 1000px;
 	background-color: black;
 	border-bottom: 1px solid gray;
 	width:100%;
+	position: relative;
 }
-	#top-container {
-		width: 1000px;
-		height: 115px;
-		margin: 0px auto;
-		position: relative;
-	}
 		#logo {
 			position: absolute;
 			width: 200px;
@@ -53,7 +49,6 @@ Layout
 			padding-right: 20px;
 			text-align: right;
 			color: gray;
-			background-color: black;
 		}
 		#navi {
 			position: absolute;
@@ -61,21 +56,20 @@ Layout
 			right: 0px;
 			bottom: 0px;
 			height: 60px;
-			width: 790px;
 			background-color: black;
 		}
 #main {
 	width: 100%;
-	height: auto;
 	background-color: black;
 	position: relative;
 }
 .centered-body {
 	width: 1000px;
 	margin: 0px auto;
-	height: auto;
+	height: 100%;
 	position: relative;
 }
+
 #home-img {
 	min-width: 1600px;
 	margin-left: -600px;
@@ -87,8 +81,8 @@ Layout
 	height: 800px;
 }
 #banner-img {
-
-	height: 152px;
+	min-width: 1000px;
+	height: 150px;
 	margin: 0px auto;
 	background-color: black;
 }
@@ -101,10 +95,12 @@ Layout
 	margin: 0px auto;
 }
 #info_block {
-	padding: 20px 0px 50px 0px;
-	min-height: 300px;
-	height: 100%;
+	min-width: 1000px;
+	min-height: 600px;
 	background-color: #eeeeee;
+}
+#info_block .centered-body {
+	min-height: 600px;
 }
 #info_block p {
 	font-family: "Times New Roman", Times, serif;
@@ -123,11 +119,11 @@ Layout
 	float: left;
 	width: 100px;
 }
+
 .info-container {
 	left: 200px;
 	width: 750px;
-	margin-left: 30px;
-	min-height: 300px;
+	height: 100%;
 	padding:5px;
 	position: relative;
 }
@@ -136,13 +132,16 @@ Layout
 	margin-left: 20px;
 	margin-top: 20px;
 }
+.info-container ul {
+	margin: 0px 0px 50px 0px;
+	padding: 0px;
+}
 .info-container p {
 	margin: 10px;
 }
 #bottom-img-slides {
 	height: 200px;
 	background-color: white;
-	padding: 0px 100px;
 }
 #contact-block {
 	height: 400px;
@@ -249,8 +248,7 @@ navigation
 }
 #service-menu {
 	position: absolute;
-	top: -60px;
-	left:0px;
+	top: -40px;
 	width: 200px;
 	background-color: #886a08; /*棕褐色*/
 }
@@ -300,7 +298,7 @@ navigation
 		float: right;
 		width: 234px;
 		height: 180px;
-		margin: 5px 0px;
+		margin: 10px 5px;
 	}
 	.img-frame img {
 		max-width: 230px;
@@ -370,7 +368,7 @@ navigation
 }
 .news-item  img {
 	float: left;
-	margin-left: -200px;
+	margin-left: -180px;
 	margin-top: -10px;
 }
 .carousel-inner img {
@@ -389,14 +387,14 @@ pagination
 ----------------------------------------
 */
 #page-list {
-	float: left;
 	text-align: center;
 	height: 30px;
 	padding-top: 1px;
 	margin-top: 20px;
 	font-size: 0.8em;
 	position: absolute;
-	bottom: 10px;
+	left: 220px;
+	bottom: 20px;
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
 }
@@ -420,20 +418,19 @@ footer
 #footer {
 	height: 80px;
 	border-top: 1px solid gray;
+	font-size: 0.9em;
+	padding-top: 10px;
+	min-width: 1000px;
+	width: 100%;
 }
-	#bottom-nav {
-		font-size: 0.9em;
-		padding-top: 10px;
-		width: 1000px;
-	}
-	#bottom-nav a {
+	#footer a {
 		color: gray;
 	}
-		#bottom-nav ul {
+		#footer ul {
 			padding: 20px 30px;
 			float: left;            
 		}
-		#bottom-nav ul > li {
+		#footer ul > li {
 			list-style-type: none;
 			padding: 3px 0px;
 		}
