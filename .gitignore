@@ -1,6 +1,5 @@
 apache/*
 tangxi_website/media/*
-tangxi_website/static/img/*
 tangxi_website/static/admin/*
 tangxi_website/static/bootstrap/*
 *.pyc
