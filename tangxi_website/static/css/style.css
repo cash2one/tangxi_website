@@ -28,8 +28,8 @@ Layout
 #top-panel {
 	height: 115px;
 	background-color: black;
-	margin: 0px auto;
 	border-bottom: 1px solid gray;
+	width:100%;
 }
 	#top-container {
 		width: 1000px;
@@ -46,27 +46,29 @@ Layout
 		#hot-line {
 			position: absolute;
 			left: 202px;
-			width: 790px;
+			right: 0px;
 			height: 30px;
 			border-bottom: 1px solid gray;
 
-			padding: 5px  2px  2px 5px;
+			padding-right: 20px;
 			text-align: right;
 			color: gray;
+			background-color: black;
 		}
 		#navi {
 			position: absolute;
 			left: 202px;
+			right: 0px;
 			bottom: 0px;
 			height: 60px;
 			width: 790px;
+			background-color: black;
 		}
 #main {
 	width: 100%;
-	min-height: 600px;
-	height: 100%;
 	height: auto;
 	background-color: black;
+	position: relative;
 }
 .centered-body {
 	width: 1000px;
@@ -75,12 +77,14 @@ Layout
 	position: relative;
 }
 #home-img {
-	margin: 0px auto;
-	width: 1280px;
+	min-width: 1600px;
+	margin-left: -600px;
 }
 #home-img img {
-	max-width: 100%;
-	max-height: 800px;
+	display: block;
+	width: 100%;
+	top: 50%;
+	height: 800px;
 }
 #banner-img {
 
@@ -91,6 +95,7 @@ Layout
 #banner-img img {
 	position: relative;
 	top: 0px;
+	width: 100%;
 	display: block;
 	height: 150px;
 	margin: 0px auto;
