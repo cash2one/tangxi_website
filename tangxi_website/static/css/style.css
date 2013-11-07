@@ -47,6 +47,7 @@ Layout
 			border-bottom: 1px solid gray;
 
 			padding-right: 20px;
+			padding-top: 10px;
 			text-align: right;
 			color: gray;
 		}
@@ -104,40 +105,51 @@ Layout
 }
 #info_block p {
 	font-family: "Times New Roman", Times, serif;
-	font-size: 1.2em;
+	font-size: 1.15em;
+	padding: 5px 0px;
 }
 #info_block h4 {
 	font-family: "Times New Roman", Times, serif;
+	margin-top: 0px;
 }
 #info_block a {
 	color: #ff9933;
-}
-#info_block p {
-	padding: 4px 10px;
-}
-#info_block p span {
-	float: left;
-	width: 100px;
 }
 
 .info-container {
 	left: 200px;
 	width: 750px;
 	height: 100%;
-	padding:5px;
 	position: relative;
+	padding: 40px;
 }
 
-.info-container h4 {
-	margin-left: 20px;
-	margin-top: 20px;
-}
 .info-container ul {
 	margin: 0px 0px 50px 0px;
 	padding: 0px;
 }
-.info-container p {
-	margin: 10px;
+.info-container li {
+	margin: 0px;
+	padding: 0px;
+}
+
+.news-item  {
+	height: 180px;
+	position: relative;
+}
+.news-item  img {
+	position: absolute;
+	width: 230px;
+	height: 150px;
+}
+.news-item h4, .news-item p {
+	position: relative;
+	left: 250px;
+}
+.news-item p:last-child {
+	position: absolute;
+	left: 250px;
+	bottom: 20px;
 }
 #bottom-img-slides {
 	height: 200px;
@@ -163,28 +175,38 @@ Layout
 navigation
 ----------------------------------------
 */
-
+#navi p {
+	margin: 0px;
+	padding: 0px;
+}
 #navi a {
 	color: gray;
 	font-size: 0.9em;
 	text-decoration: none;
+	border: 0px;
 }
 #navi a:hover {
 	color: white;
+}
+#navi .dropdown-toggle {
+	outline: 0px;
 }
 #navi ul {
 	margin: 0px;
 	padding: 0px;
 }
-#navi ul li{
+#navi ul li {
 	display: block;
 	float: left;
-	text-align: left;
-	text-indent: 20px;
+	text-indent: 30px;
 	width: 120px;
+	height: 60px;
 	border-left: 1px solid gray;
 	position: relative;
 	font-family: "Times New Roman", Times, serif;
+}
+#navi li p:first-child {
+	padding-top: 10px;
 }
 #navi li:first-child {
 	border: 0px;
@@ -192,9 +214,6 @@ navigation
 #navi li:hover {
 	background-image: -moz-linear-gradient(top, #333333, white 50%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, black), color-stop(1, #333333));
-}
-#navi span {
-	padding-left: 10px;
 }
 #navi .caret {
   width: 0;
@@ -207,9 +226,9 @@ navigation
   margin-right: 5px;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 20px;
 }
-#submenu {
+#submenu.dropdown-menu {
   	background-color: black;
 	opacity:0.7;
 	filter:alpha(opacity=70);
@@ -224,6 +243,10 @@ navigation
 	border-radius: 0px;
 	
 }
+#submenu.dropdown-menu ul {
+	margin-top: 0px;
+	padding-top: 0px;
+}
 #submenu.dropdown-menu li {
 	height: 30px;
 	background-color: black;
@@ -231,10 +254,11 @@ navigation
 	z-index: 10;
 	border-left: 0px;
 	padding-bottom: 0px;
-	padding-top: 5px;
+	padding-top: 0px;
+	margin-top: 0px;
 	border-top: 1px solid gray;
 }
-#submenu.dropdown-menu li:first-child {
+#submenu li:first-child {
 	border: 0px;
 }
 #submenu li a {
@@ -361,16 +385,7 @@ navigation
 	color: white;
 	background-color: #886a08; /*棕褐色*/
 }
-.news-item  {
-	margin-left: 160px; 
-	margin-top: 10px;
-	height: 200px;
-}
-.news-item  img {
-	float: left;
-	margin-left: -180px;
-	margin-top: -10px;
-}
+
 .carousel-inner img {
 	max-height: 300px;
 	max-width: 600px;
@@ -387,24 +402,21 @@ pagination
 ----------------------------------------
 */
 #page-list {
-	text-align: center;
-	height: 30px;
-	padding-top: 1px;
-	margin-top: 20px;
-	font-size: 0.8em;
 	position: absolute;
 	left: 220px;
 	bottom: 20px;
+	width: 100%;
+	height: 20px;
+
+	text-align: center;
+	padding: 10px;
+	font-size: 0.8em;
+	
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
 }
-#page-list p {
-	clear: both;
-	margin: 2px 5px;
-	display: block;
-}
 #page-list span {
-	padding: 0px 2px;
+	padding: 0px 10px;
 	margin: 0px;
 }
 #page-list a {
@@ -416,24 +428,46 @@ footer
 ----------------------------------------
 */
 #footer {
-	height: 80px;
+	height: 90px;
 	border-top: 1px solid gray;
 	font-size: 0.9em;
-	padding-top: 10px;
 	min-width: 1000px;
-	width: 100%;
+	position: relative;
+	color: silver;
+	font-family: "Times New Roman", Times, serif;
 }
 	#footer a {
-		color: gray;
+		color: silver;
 	}
-		#footer ul {
-			padding: 20px 30px;
-			float: left;            
-		}
-		#footer ul > li {
-			list-style-type: none;
-			padding: 3px 0px;
-		}
+	#footer .divider {
+		border-top: 1px solid gray;
+	}
+	#footer .foot-line {
+		padding: 15px 0 10px 0;
+		height: 20px;
+	}
+	#footer span {
+		float: left;
+		color: silver;
+		padding-right: 20px;
+		line-height: 1em;
+	}
+	#footer ul {
+		float: left;   
+		margin: 0px;
+	}
+	#footer ul li {
+		margin: 0px;
+		padding: 0px 15px;
+		float: left;
+		list-style-type: none;
+		border-left: 1px solid silver;
+		line-height: 1em;
+	}
+	#footer ul li:first-child {
+		border-left: 0px;
+		padding-left: 0px;
+	}
 /*
 ========================================
 color theme

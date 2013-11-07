@@ -11,15 +11,14 @@
 			{% for item in news %}
 			<li class="news-item">
 				<img src="/static/img/default_news_thumb.png" alt="">
-				<h4>{{ item.name }}</h4>
 				<p>{{ item.date }}</p>
+				<h4>{{ item.name }}</h4>
 				<p><a href="/news_detail/{{item.id}}">详情<b class="more-caret"></b></a></p>
 			</li>
 			{% endfor %}
 			</ul>
 		</div>
 		<div id="page-list">
-			<p>
 			{% if page.has_previous %}
 				<a href="/news/{{ page.previous_page_number }}/"><span>上一页</span></a>
 			{% else %}
@@ -40,7 +39,6 @@
 				<span>下一页</span>
 			{% endif %}
 			<span>第 {{ page.number }} 页</span> <span>共 {{ paginator.num_pages }} 页</span>
-			</p>
 			</div>
 	</div>
 </div>
