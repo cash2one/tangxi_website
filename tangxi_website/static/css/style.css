@@ -118,7 +118,7 @@ Layout
 
 .info-container {
 	left: 200px;
-	width: 750px;
+	width: 760px;
 	height: 100%;
 	position: relative;
 	padding: 40px;
@@ -403,9 +403,9 @@ pagination
 */
 #page-list {
 	position: absolute;
-	left: 220px;
+	left: 240px;
 	bottom: 20px;
-	width: 100%;
+	width: 740px;
 	height: 20px;
 
 	text-align: center;
