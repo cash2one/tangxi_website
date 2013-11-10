@@ -4,7 +4,23 @@
 	<title>服务器错误</title>
 </head>
 <body>
-	<h1>貌似服务器出现内部错误，对此我们表示非常抱歉！</h1>
+	<h1></h1>
 	<p>500错误。</p>
 </body>
 </html>
+{% extends "includes/base_info_page.html"%}
+
+{% block main %}
+<div id="banner-img">
+	<img src="/static/img/banner2.jpg" alt="">
+</div>
+<div id="info_block">
+	<div class="centered-body">
+		<div class="info-container">
+			<h3>服务器错误</h3>
+			<p>错误代码：500。</p>
+			<p>貌似服务器出现内部错误，对此我们表示非常抱歉！</p>
+		</div>
+	</div>
+</div>
+{% endblock main %}

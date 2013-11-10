@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>找不到该页</title>
-</head>
-<body>
-	<h1>找不到该页！</h1>
-	<p>404错误。</p>
-</body>
-</html>
+{% extends "includes/base_info_page.html"%}
+
+{% block main %}
+<div id="banner-img">
+	<img src="/static/img/banner2.jpg" alt="">
+</div>
+<div id="info_block">
+	<div class="centered-body">
+		<div class="info-container">
+			<h3>找不到该页</h3>
+			<p>错误代码：404。</p>
+			<p>找不到该页。</p>
+		</div>
+	</div>
+</div>
+{% endblock main %}
