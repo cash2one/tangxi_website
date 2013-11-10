@@ -4,25 +4,21 @@
 	<img src="/static/img/banner-stairway.jpg" alt="">
 </div>
 <div id="info_block">
-	<div class="centered-body">
-		<div id="menu-placeholder">
-		</div>
-		<div class="info-container">
-			<h3>唐玺会馆招聘信息！</h3>
+	<div class="centered-body long-block">
+		<div class="info-container long-block">
+			<h3>唐玺会馆招聘信息</h3>
 			<ul>
-				{% for job in jobs %}
-				<li>
-				<p>{{job.title}} {{ job.quantity }}名:</p>
-				<p>发布日期： {{ job.date }} </p>
-				<p>要求：{{ job.description}} </p>
-				<br/>
-				</li>
-				{% endfor %}
+			{% for job in jobs %}
+			<li>
+			<p>{{job.title}} {{ job.quantity }}名:</p>
+			<p>发布日期： {{ job.date }} </p>
+			<p>要求：{{ job.description}} </p>
+			<br/>
+			</li>
+			{% endfor %}
 			</ul>
-			
 		</div>
 		<div id="page-list">
-			<p>
 			{% if page.has_previous %}
 				<a href="/join_us/{{ page.previous_page_number }}/"><span>上一页</span></a>
 			{% else %}
@@ -38,12 +34,11 @@
 			{% endfor %}
 
 			{% if page.has_next %}
-				<a href="/join_us/{{ page.next_page_number }}/"><span>下一页</span></a>
+				<a href="/join_us/{{ page.next_page_number }}/"> <span>下一页</span></a>
 			{% else %}
 				<span>下一页</span>
 			{% endif %}
 			<span>第 {{ page.number }} 页</span> <span>共 {{ paginator.num_pages }} 页</span>
-			</p>
 		</div>
 	</div>
 </div>
