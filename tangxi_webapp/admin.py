@@ -19,7 +19,7 @@ class ImagesAdmin(admin.ModelAdmin):
 	fields = ('title', 'path',)
 
 class ServiceProfileAdmin(admin.ModelAdmin):
-	list_display = ('name', 'image_title', 'description',)
+	list_display = ('name', 'description',)
 	list_filter = ('name', 'image_title',)
 	ordering = ('-name',)
 	fields = ('name', 'image_title', 'description')

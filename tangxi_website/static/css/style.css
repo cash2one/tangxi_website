@@ -3,9 +3,7 @@
 global element
 ----------------------------------------
 */
-html {
-	font-family: "Times New Roman", Times, serif;
-}
+
 body {
 	background-color: black;
 }
@@ -29,7 +27,7 @@ Layout
 	height: 115px;
 	min-width: 1000px;
 	background-color: black;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #636363;
 	width:100%;
 	position: relative;
 }
@@ -44,12 +42,12 @@ Layout
 			left: 202px;
 			right: 0px;
 			height: 30px;
-			border-bottom: 1px solid gray;
+			border-bottom: 1px solid #636363;
 
 			padding-right: 20px;
 			padding-top: 10px;
 			text-align: right;
-			color: gray;
+			color: silver;
 		}
 		#navi {
 			position: absolute;
@@ -86,6 +84,7 @@ Layout
 	height: 150px;
 	margin: 0px auto;
 	background-color: black;
+	z-index: -1;
 }
 #banner-img img {
 	position: relative;
@@ -106,9 +105,10 @@ Layout
 	height: 250px;
 }
 #info_block p {
-	font-family: "SimHei", Times, serif;
+	font-family: "Hirogino Sans GB", "Hirogino Sans GB W3", "Microsoft YaHei";
 	line-height: 170%;
-	margin: 12px 0px;
+	padding: 12px 0 0 0;
+	margin: 0;
 }
 #info_block .short-block p {
 	line-height: 100%;
@@ -176,8 +176,8 @@ Layout
 }
 #map-block {
 	
-	width:400px;
-	height: 280px;
+	width:281px;
+	height: 287px;
 	position: relative;
 	top: 40px; 
 }
@@ -190,11 +190,15 @@ Layout
 		padding: 10px 0px;
 		margin: 0;
 		background-color: black;
+		opacity:0.1;
+		filter:alpha(opacity=10);
+
+		text-indent: 100px;
+		width: 100%;
+	}
+	#map-block p:hover {
 		opacity:0.5;
 		filter:alpha(opacity=50);
-
-		text-indent: 150px;
-		width: 100%;
 	}
 	#map-block a {
 		color: white;
@@ -203,8 +207,8 @@ Layout
 	position: absolute;
 	right: 0px;
 	top: 40px; 
-	width: 580px;
-	height: 280px;
+	width: 700px;
+	height: 287px;
 	background-color: #f2f2f2; /*浅银色*/
 }
 #contact-form label {
@@ -217,7 +221,7 @@ Layout
 #contact-form textarea {
 	float: right;
 	margin-right: 40px;
-	width: 400px;
+	width: 540px;
 }
 #contact-form h4 {
 	background-color: black;
@@ -232,7 +236,7 @@ Layout
 	height: 2.6em;
 	border: 0px;
 	clear: both;
-	background-color: #886a08; /*棕褐色*/
+	background-color: #a1865d; /*棕褐色*/
 }
 /*
 ========================================
@@ -265,8 +269,8 @@ navigation
 	float: left;
 	width: 90px;
 	height: 40px;
-	border-left: 1px solid gray;
-	font-family: "SimHei", Arial, serif;
+	border-left: 1px solid #636363;
+	font-family: "Hirogino Sans GB", "Hirogino Sans GB W3", "Microsoft YaHei";
 	font-size: 0.9em;
 	line-height: 120%;
 	padding-top: 10px;
@@ -277,7 +281,7 @@ navigation
 	border: 0px;
 }
 #navi li:hover {
-	background-image: -moz-linear-gradient(top, #333333, white 50%);
+	background-image: -moz-linear-gradient(top, black, #333333 50%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, black), color-stop(1, #333333));
 }
 #navi .caret {
@@ -298,7 +302,7 @@ navigation
 	background-color: black;
 	opacity:0.7;
 	filter:alpha(opacity=70);
-	background-color: #886a08; /*棕褐色*/
+	background-color: #a1865d; /*棕褐色*/
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
@@ -316,7 +320,8 @@ navigation
 	border-left: 0px;
 	padding: 0px;
 	margin: 0px;
-	border-top: 1px solid gray;
+	border-top: 1px solid #636363;
+	z-index: 10;
 }
 #submenu.dropdown-menu  li:first-child {
 	border: 0px;
@@ -345,7 +350,7 @@ navigation
 #service-menu {
 	position: absolute;
 	width: 200px;
-	background-color: #886a08; /*棕褐色*/
+	background-color: #a1865d; /*棕褐色*/
 }
 #service-menu h4 {
 	background-color: black;
@@ -355,7 +360,7 @@ navigation
 	height: 40px;
 	padding: 10px 0 5px 0;
 	padding-left: 10px;
-	font-family: "SimHei", Times, serif;
+	font-family: "Hirogino Sans GB", "Hirogino Sans GB W3", "Microsoft YaHei";
 	position: absolute;
 	width: 190px;
 }
@@ -371,7 +376,7 @@ navigation
 	line-height: 230%;
 	text-indent: 2em;
 	color: black;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #636363;
 	position: relative;
 }
 #service-menu a {
@@ -390,7 +395,7 @@ navigation
   margin-top: 10px;
   width: 0;
   height: 0;
-  border-left: 4px solid #886a08; /*棕褐色*/
+  border-left: 4px solid #a1865d; /*棕褐色*/
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
   content: "";
@@ -419,7 +424,7 @@ navigation
 	margin-top: 5px;
 	width: 0;
 	height: 0;
-	border-right: 10px solid #886a08; /*棕褐色*/
+	border-right: 10px solid #a1865d; /*棕褐色*/
 	border-top: 6px solid transparent;
 	border-bottom: 6px solid transparent;
 	content: "";
@@ -430,7 +435,7 @@ navigation
 	margin-top: 5px;
 	width: 0;
 	height: 0;
-	border-left: 10px solid #886a08; /*棕褐色*/
+	border-left: 10px solid #a1865d; /*棕褐色*/
 	border-top: 6px solid transparent;
 	border-bottom: 6px solid transparent;
 	content: "";
@@ -462,15 +467,15 @@ pagination
 	padding: 10px;
 	font-size: 0.8em;
 	
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
+	border-top: 1px solid #636363;
+	border-bottom: 1px solid #636363;
 }
 #page-list span {
 	padding: 0px 10px;
 	margin: 0px;
 }
 #page-list a {
-	color: #886a08; /*棕褐色*/
+	color: #a1865d; /*棕褐色*/
 }
 /*
 ========================================
@@ -479,7 +484,7 @@ footer
 */
 #footer {
 	height: 90px;
-	border-top: 1px solid gray;
+	border-top: 1px solid #636363;
 	font-size: 0.9em;
 	min-width: 1000px;
 	position: relative;
@@ -494,7 +499,7 @@ footer
 		text-decoration: none;
 	}
 	#footer .divider {
-		border-top: 1px solid gray;
+		border-top: 1px solid #636363;
 	}
 	#footer .foot-line {
 		padding: 15px 0 10px 0;
@@ -515,7 +520,7 @@ footer
 		padding: 0px 15px;
 		float: left;
 		list-style-type: none;
-		border-left: 1px solid silver;
+		border-left: 1px solid #636363;
 		line-height: 1em;
 	}
 	#footer ul li:first-child {
