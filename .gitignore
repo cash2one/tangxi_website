@@ -1,6 +1,5 @@
 apache/*
 tangxi_website/media/*
 tangxi_website/static/admin/*
-tangxi_website/static/bootstrap/*
 *.pyc
 tangxi_website/static/script/jquery-1.9.1.min.js
