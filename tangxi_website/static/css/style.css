@@ -57,7 +57,7 @@ Layout
 		}
 		#navi {
 			position: absolute;
-			left: 222px;
+			left: 202px;
 			right: 0px;
 			bottom: 0px;
 			height: 50px;
@@ -290,6 +290,7 @@ navigation
 }
 #navi li:first-child {
 	border: 0px;
+	text-indent: 35px;
 }
 #navi li:hover {
 	background-image: -moz-linear-gradient(top, black, #333333 50%);
@@ -368,14 +369,21 @@ navigation
 	background-color: black;
 	color: white;
 	margin: 0;
-	top: -40px;
-	height: 40px;
-	padding: 10px 0 5px 0;
-	padding-left: 10px;
+	top: -45px;
+	height: 30px;
+	padding: 12px 0 5px 0;
+	text-indent: 2em;
+	font-size: 1em;
 	font-weight: normal;
 	font-family: "Hirogino Sans GB", "Hirogino Sans GB W3", "Microsoft YaHei";
 	position: absolute;
-	width: 190px;
+	width: 200px;
+}
+#service-menu .en {
+	font-size: 1.7em;
+	font-family: Times;
+	padding-right: 0.4em;
+	margin-left: -0.2em; 
 }
 #service-menu ul {
 	margin: 0 0 3px 0;
@@ -397,6 +405,9 @@ navigation
 }
 #service-menu a {
 	color: black;
+}
+#service-menu .active-menu {
+	background-color: white;
 }
 #service-menu a:hover {
 	text-decoration: none;

@@ -1,0 +1,663 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"图片",
+				"图片名称"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"out",
+				"outline"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"ser",
+				"service_profile"
+			],
+			[
+				"F",
+				"False"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"rig",
+				"right"
+			],
+			[
+				"lef",
+				"left"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"st",
+				"style	Attr"
+			],
+			[
+				"HttpR",
+				"HttpResponseRedirect"
+			],
+			[
+				"Htt",
+				"HttpResponse"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"f",
+				"font"
+			],
+			[
+				"page",
+				"page_number"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"c",
+				"context	get_context_data"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"co",
+				"context"
+			],
+			[
+				"in",
+				"text-indent"
+			],
+			[
+				"li",
+				"list-style-type"
+			],
+			[
+				"h",
+				"h4	Tag"
+			],
+			[
+				"te",
+				"text-indent"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"news",
+				"news_id"
+			],
+			[
+				"s",
+				"service_profile"
+			],
+			[
+				"img",
+				"img_url"
+			],
+			[
+				"A",
+				"ActivityAdmin"
+			],
+			[
+				"servi",
+				"service_name"
+			],
+			[
+				"list",
+				"list_filter"
+			],
+			[
+				"tang",
+				"tangxi_website"
+			],
+			[
+				"service",
+				"service_display_name"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"colum",
+				"Snippet: display:table-column"
+			],
+			[
+				"o	",
+				"Snippet: opacity"
+			],
+			[
+				"Snippet: ",
+				"Snippet: if"
+			],
+			[
+				"djan	",
+				"Django: Shell"
+			],
+			[
+				"djan",
+				"Django: Shell"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Set Syntax: Python"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) );",
+			"ipp = sublime.installed_packages_path(); ",
+			"pf = 'Package Control.sublime-package'; ",
+			"import urllib.request,os; ",
+			"dir(os)",
+			"dir(sys)",
+			"cwd()",
+			"import sys",
+			"cwd()",
+			"os.cwd()",
+			"import os",
+			"print os.cwd",
+			"print cwd",
+			"print cwd()",
+			"print pwd()",
+			"python"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi.sublime-project",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/services_detail.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/company_culture.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/news.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/includes/css.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/includes/js.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/includes/menu.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/static/bootstrap/css/bootstrap.css",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_webapp/views.py",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/contact.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/settings.py",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/500.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/404.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_webapp/admin.py",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_webapp/models.py",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/static/css/style.css",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/join_us.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/includes/footer.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/thanks.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/service_content/billiard.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/service_content/card.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/service_content/foot_massage.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/service_content/spa.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/service_content/tea.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/photos.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/news_detail.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/services.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/includes/base_info_page.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/home.html",
+		"/Users/lnhote/Downloads/django module/mod_wsgi-3.4/mod_wsgi.c",
+		"/private/etc/apache2/httpd.conf",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/apache/error_log",
+		"/private/etc/apache2/extra/httpd-vhosts.conf",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/urls.py",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/map.html",
+		"/Users/lnhote/Library/Application Support/Sublime Text 3/Packages/Djaneiro/Settings/HTML (Django).sublime-settings",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/enter.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/templates/about.html",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/wsgi.py",
+		"/Users/lnhote/Dropbox/Code/tangxi/tangxi/tangxi_app/views.py",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/apache/httpd-vhosts.conf",
+		"/Users/lnhote/Dropbox/Code/tangxi_website/tangxi_website/wsgi.py",
+		"/Users/lnhote/Dropbox/Code/tangxi/tangxi/templates/includes/base_info_page.html",
+		"/Users/lnhote/Dropbox/Code/tangxi/tangxi/templates/example.html",
+		"/Users/lnhote/Dropbox/Code/tangxi/tangxi/static/css/style.css",
+		"/Users/lnhote/Dropbox/Code/tangxi/tangxi/templates/services_detail.html",
+		"/Users/lnhote/Dropbox/Code/tangxi/tangxi/templates/includes/js.html",
+		"/Users/lnhote/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/lnhote/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/lnhote/Dropbox/Code/tangxi/manage.py"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.*",
+			"",
+			"tangxi_website/",
+			"tangxi_website/templates/",
+			"style.css",
+			"*",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"out",
+			"tx-dropdown-menu",
+			"dropdown-menu",
+			"dropdown-backdrop",
+			"0088cc",
+			"Microsoft YaHei",
+			"SimHei",
+			"color: #636363",
+			"silver",
+			"#886a08",
+			"1px solid gray",
+			"dropdown-menu",
+			":hover",
+			"h4",
+			"overflow",
+			"placehoder",
+			"content-container",
+			"dropdown-menu",
+			"true",
+			"main"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"dropdown-menu",
+			"Microsoft YaHei",
+			"color: silver",
+			"#636363",
+			"#a1865d",
+			"1px solid silver",
+			"centered-body"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"joi",
+				"tangxi_website/templates/join_us.html"
+			],
+			[
+				"news",
+				"tangxi_website/templates/news.html"
+			],
+			[
+				"ser",
+				"tangxi_website/templates/services_detail.html"
+			],
+			[
+				"c",
+				"tangxi_website/templates/company_culture.html"
+			],
+			[
+				"css",
+				"tangxi_website/templates/includes/css.html"
+			],
+			[
+				"js",
+				"tangxi_website/templates/includes/js.html"
+			],
+			[
+				"menu",
+				"tangxi_website/templates/includes/menu.html"
+			],
+			[
+				"service",
+				"tangxi_website/templates/services_detail.html"
+			],
+			[
+				"view",
+				"tangxi_webapp/views.py"
+			],
+			[
+				"contac",
+				"tangxi_website/templates/contact.html"
+			],
+			[
+				"co",
+				"tangxi_website/templates/company_culture.html"
+			],
+			[
+				"admin",
+				"tangxi_webapp/admin.py"
+			],
+			[
+				"model",
+				"tangxi_webapp/models.py"
+			],
+			[
+				"40",
+				"tangxi_website/templates/404.html"
+			],
+			[
+				"500",
+				"tangxi_website/templates/500.html"
+			],
+			[
+				"setting",
+				"tangxi_website/settings.py"
+			],
+			[
+				"join",
+				"tangxi_website/templates/join_us.html"
+			],
+			[
+				"contact",
+				"tangxi_website/templates/contact.html"
+			],
+			[
+				"comp",
+				"tangxi_website/templates/company_culture.html"
+			],
+			[
+				"foo",
+				"tangxi_website/templates/includes/footer.html"
+			],
+			[
+				"base",
+				"tangxi_website/templates/includes/base_info_page.html"
+			],
+			[
+				"s",
+				"tangxi_website/templates/services_detail.html"
+			],
+			[
+				"home",
+				"tangxi_website/templates/home.html"
+			],
+			[
+				"sett",
+				"tangxi_website/settings.py"
+			],
+			[
+				"st",
+				"tangxi_website/static/css/style.css"
+			],
+			[
+				"cont",
+				"tangxi_website/templates/contact.html"
+			],
+			[
+				"foot",
+				"tangxi_website/templates/includes/footer.html"
+			],
+			[
+				"ur",
+				"tangxi_website/urls.py"
+			],
+			[
+				"url",
+				"tangxi_website/urls.py"
+			],
+			[
+				"serv",
+				"tangxi_website/templates/services_detail.html"
+			],
+			[
+				"com",
+				"tangxi_website/templates/company_culture.html"
+			],
+			[
+				"ph",
+				"tangxi_website/templates/photos.html"
+			],
+			[
+				"map",
+				"tangxi_website/templates/map.html"
+			],
+			[
+				"mod",
+				"tangxi_webapp/models.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"tangxi",
+				"~/Dropbox/Code/tangxi_website/untitled.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

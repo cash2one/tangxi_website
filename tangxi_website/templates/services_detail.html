@@ -7,20 +7,26 @@
 <div id="info_block">
 	<div class="centered-body">
 		<div id="service-menu">
-			<h4>Services 特色服务</h4>
+			<h4><span class="en">Services</span>特色服务</h4>
 			<ul>
-				<li><a href="/services/foot_massage/">足疗</a>
-					{% ifequal service_display_name '足疗按摩' %} <b class="active-menu-caret"></b>{% endifequal %}</li>
-				<li><a href="/services/card/">棋牌</a>
+				<li {% ifequal service_display_name '足疗按摩' %} class="active-menu" {% endifequal %}>
+					<a href="/services/foot_massage/">足疗</a>
+					{% ifequal service_display_name '足疗按摩' %} <b class="active-menu-caret"></b>{% endifequal %}
+				</li>
+				<li {% ifequal service_display_name '棋牌' %} class="active-menu" {% endifequal %}>
+					<a href="/services/card/">棋牌</a>
 					{% ifequal service_display_name '棋牌' %} <b class="active-menu-caret"></b>{% endifequal %}
 				</li>
-				<li><a href="/services/tea/">茶道</a>
+				<li {% ifequal service_display_name '茶道' %} class="active-menu" {% endifequal %}>
+					<a href="/services/tea/">茶道</a>
 					{% ifequal service_display_name '茶道' %} <b class="active-menu-caret"></b>{% endifequal %}
 				</li>
-				<li><a href="/services/spa/">SPA</a>
+				<li {% ifequal service_display_name 'SPA' %} class="active-menu" {% endifequal %}>
+					<a href="/services/spa/">SPA</a>
 					{% ifequal service_display_name 'SPA' %} <b class="active-menu-caret"></b>{% endifequal %}
 				</li>
-				<li><a href="/services/billiard/">台球</a>
+				<li {% ifequal service_display_name '台球' %} class="active-menu" {% endifequal %}>
+					<a href="/services/billiard/">台球</a>
 					{% ifequal service_display_name '台球' %} <b class="active-menu-caret"></b>{% endifequal %}
 				</li>
 			</ul>
