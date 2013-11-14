@@ -1,7 +1,14 @@
 {% extends "includes/base_info_page.html"%}
 
 {% block main %}
-<div id="home-img">
-	<img src="/static/img/main_bg1.jpg"/>
+<div id="home-img" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="item active"><img src="/static/img/main_bg1.jpg" alt></div>
+			<div class="item"><img src="/static/img/bg_slide_1.jpg" alt></div>
+			<div class="item"><img src="/static/img/bg_slide_2.jpg" alt></div>
+		</div>
+		<a href="#home-img" class="left carousel-btn" data-slide="prev"><span>‹</span></a>
+		<a href="#home-img" class="right carousel-btn" data-slide="next"><span>›</span></a>
+	</div>
 </div>
 {% endblock main %}

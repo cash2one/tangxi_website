@@ -29,15 +29,15 @@ urlpatterns += patterns('tangxi_webapp.views',
 
     url(r'^thanks/$', 'show_contact_thanks_page'),
     url(r'^contact/$', 'show_contact_page'),
-    url(r'^about/$', 'show_about_page'),
+    #url(r'^about/$', 'show_about_page'),
     url(r'^join_us/(?P<page_number>\d+)/$', 'show_join_us_page'),
     url(r'^join_us/$', 'show_join_us_page'),
-    url(r'^photos/$', 'show_photos_page'),
+    #url(r'^photos/$', 'show_photos_page'),
     
 	
 )
 
 if settings.DEBUG:
 	urlpatterns += patterns('',
-#		(r'^debuginfo/$', bollk.views.debug),
+#		(r'^debuginfo/$', tangxi_webapp.views.debug),
 	)
