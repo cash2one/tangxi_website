@@ -331,6 +331,7 @@ navigation
 }
 #submenu.dropdown-menu  li:first-child {
 	border: 0px;
+	text-indent: 15px;
 }
 #submenu.dropdown-menu li a {
 	height: 27px;
