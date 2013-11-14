@@ -152,13 +152,7 @@ def show_about_page(request):
 def show_photos_page(request):
 	'''
 	'''
-	img_url = MEDIA_URL
-	imgs = Images.objects.all()
-	context = {
-		'img_url': img_url,
-		'imgs':imgs
-	}
-	return render_to_response('photos.html', context) 
+	return render_to_response('photos.html', {}) 
 
 #=======================================
 # Function API End Here.

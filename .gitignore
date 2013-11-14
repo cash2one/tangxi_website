@@ -2,4 +2,4 @@ apache/*
 tangxi_website/media/*
 tangxi_website/static/admin/*
 *.pyc
-tangxi_website/static/script/jquery-1.9.1.min.js
+*.sublime-workspace
