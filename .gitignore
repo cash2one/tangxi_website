@@ -3,3 +3,4 @@ tangxi_website/media/*
 tangxi_website/static/admin/*
 *.pyc
 *.sublime-workspace
+*.conf
