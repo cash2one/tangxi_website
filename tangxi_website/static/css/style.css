@@ -47,11 +47,10 @@ Layout
 			position: absolute;
 			left: 202px;
 			right: 0px;
-			height: 30px;
+			height: 3em;
 			border-bottom: 1px solid #636363;
 
-			padding-right: 20px;
-			padding-top: 10px;
+			padding: 1em 2em 1em 0;
 			text-align: right;
 			color: silver;
 		}
@@ -60,7 +59,7 @@ Layout
 			left: 202px;
 			right: 0px;
 			bottom: 0px;
-			height: 50px;
+			height: 4em;
 			background-color: black;
 		}
 #main {
@@ -87,6 +86,9 @@ Layout
 }
 #home-img .right {
 	right: 0;
+}
+#home-img .carousel-control {
+	font-size: 3em;
 }
 #home-img .carousel-btn {
 	opacity: 0;
@@ -187,15 +189,17 @@ Layout
 	width: 230px;
 	height: 150px;
 }
-.news-item h4, .news-item p {
+.news-item h4, 
+.news-item p {
 	position: relative;
 	left: 250px;
 	margin: 0px;
-	padding: 0px;
+	padding-top: 0;
 	color: black;
 }
 .news-item h4 {
 	font-family: "SimSun", Times, serif;
+	padding-top: 12px;
 }
 .news-item p:last-child {
 	position: absolute;
@@ -254,16 +258,20 @@ Layout
 	background-color: #f2f2f2; /*浅银色*/
 }
 #contact-form label {
+	padding-top: 0.5em;
 	float: left;
-	width: 70px;
+	width: 100px;
 	height: 2.4em;
 	padding-left: 30px;
+	margin-bottom: 1em;
 }
 #contact-form input,
 #contact-form textarea {
 	float: right;
+	height: 2.4em;
 	margin-right: 40px;
 	width: 540px;
+	margin-bottom: 1em;
 }
 #contact-form h4 {
 	background-color: black;
@@ -309,16 +317,18 @@ navigation
 #navi ul {
 	margin: 0px;
 	padding: 0px;
+	position: absolute;
+	bottom: 0;
+	height: 4em;
 }
 #navi ul li {
 	float: left;
-	width: 90px;
-	height: 40px;
+	width: 100px;
+	height: 100%;
 	border-left: 1px solid #636363;
 	font-family: "Hirogino Sans GB", "Hirogino Sans GB W3", "Microsoft YaHei";
 	font-size: 0.9em;
-	line-height: 120%;
-	padding-top: 10px;
+	padding: 1em 20px 1em 0;
 	text-indent: 15px;
 	z-index: 10;
 }
@@ -341,7 +351,7 @@ navigation
   margin-right: 5px;
   position: absolute;
   right: 2px;
-  top: 15px;
+  top: 2em;
 }
 #submenu.dropdown-menu {
 	background-color: black;
@@ -354,7 +364,7 @@ navigation
 	padding-bottom: 3px;
 }
 #submenu.dropdown-menu li {
-	height: 35px;
+	height: 3em;
 	background-color: black;
 	width: 180px;
 	border-left: 0px;
@@ -368,10 +378,9 @@ navigation
 	text-indent: 15px;
 }
 #submenu.dropdown-menu li a {
-	height: 27px;
+	height: 3em;
 	color: white;
-	padding: 8px 0 0 0 ;
-	font-size: 1.2em;
+	padding: 1em 0;
 }
 #submenu.dropdown-toggle {
 	background-color: #000000;
@@ -405,7 +414,7 @@ navigation
 	color: white;
 	margin: 0;
 	top: -45px;
-	height: 30px;
+	height: 45px;
 	padding: 12px 0 5px 0;
 	text-indent: 2em;
 	font-size: 1em;
@@ -516,10 +525,10 @@ pagination
 	left: 240px;
 	bottom: 20px;
 	width: 740px;
-	height: 20px;
+	height: 3em;
 
 	text-align: right;
-	padding: 10px;
+	padding: 1em;
 	font-size: 0.8em;
 	
 	border-top: 1px solid #c1c2c6;
@@ -558,8 +567,8 @@ footer
 		border-top: 1px solid #636363;
 	}
 	#footer .foot-line {
-		padding: 15px 0 10px 0;
-		height: 20px;
+		padding: 1em 0 1em 0;
+		height: 3em;
 	}
 	#footer span {
 		float: left;
