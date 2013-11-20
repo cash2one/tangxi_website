@@ -314,14 +314,15 @@ navigation
 #navi .dropdown-toggle {
 	outline: 0px;
 }
-#navi ul {
+#main-menu {
 	margin: 0px;
 	padding: 0px;
 	position: absolute;
 	bottom: 0;
-	height: 4em;
+	height: 4.5em;
+	width: 100%;
 }
-#navi ul li {
+#main-menu li {
 	float: left;
 	width: 100px;
 	height: 100%;
@@ -332,15 +333,15 @@ navigation
 	text-indent: 15px;
 	z-index: 10;
 }
-#navi li:first-child {
+#main-menu li:first-child {
 	border: 0px;
 	text-indent: 35px;
 }
-#navi li:hover {
+#main-menu li:hover {
 	background-image: -moz-linear-gradient(top, black, #333333 50%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, black), color-stop(1, #333333));
 }
-#navi .caret {
+#main-menu .caret {
   width: 0;
   height: 0;
   vertical-align: center;
@@ -353,7 +354,7 @@ navigation
   right: 2px;
   top: 2em;
 }
-#submenu.dropdown-menu {
+ul#submenu.dropdown-menu {
 	background-color: black;
 	opacity:0.7;
 	filter:alpha(opacity=70);
@@ -361,26 +362,30 @@ navigation
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
-	padding-bottom: 3px;
+	padding: 0 0 5px 0;
+	margin: 0;
 }
+
 #submenu.dropdown-menu li {
+	display: block;
 	height: 3em;
 	background-color: black;
-	width: 180px;
+	width: 200px;
 	border-left: 0px;
 	padding: 0px;
 	margin: 0px;
 	border-top: 1px solid #636363;
 	z-index: 10;
+	text-indent: 15px;
 }
 #submenu.dropdown-menu  li:first-child {
 	border: 0px;
 	text-indent: 15px;
 }
 #submenu.dropdown-menu li a {
-	height: 3em;
 	color: white;
-	padding: 1em 0;
+	padding-top: 0.8em;
+	height: 100%;
 }
 #submenu.dropdown-toggle {
 	background-color: #000000;
