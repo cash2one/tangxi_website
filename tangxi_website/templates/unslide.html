@@ -1,0 +1,20 @@
+{% extends "includes/base_info_page.html"%}
+
+{% block main %}
+<div id="home-img">
+<div class="banner">
+	<ul>
+		<li><img src="/static/img/tangxi1.jpg" alt></li>
+		<li><img src="/static/img/tangxi2.jpg" alt></li>
+		<li><img src="/static/img/tangxi3.jpg" alt></li>
+	</ul>
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://unslider.com/unslider.min.js"></script>
+<script>
+	$(function(){
+		$('.banner').unslider();
+	});
+</script>
+{% endblock main %}
