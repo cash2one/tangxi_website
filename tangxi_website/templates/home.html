@@ -19,5 +19,23 @@
 		<span class="glyphicon glyphicon-chevron-right"></span>
 	</a>
 </div>
+<script>
+	$(document).ready(function(){
+		$("body").height($(window).height());
+		$("#main").height($("body").height()-$("#top-panel").height()-$("#footer").height());
+		setInterval(function(){
+			$("body").height($(window).height());
+			$("#main").height($("body").height()-$("#top-panel").height()-$("#footer").height());
+		},1000);
+	});
+</script>
 {% endblock main %}
+{% block script %}
+<script>
+    $('.carousel').carousel({
+    	interval: 5000
+    	wrap: true
+    })
+</script>
+{% endblock script %}
 
