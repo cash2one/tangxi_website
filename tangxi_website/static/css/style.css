@@ -74,12 +74,15 @@ Layout
 	position: relative;
 }
 #homepage-banner {
+	min-width: 1000px;
 	width: 100%;
 	height: auto;
+	overflow: auto;
 }
 #homepage-banner img {
+	
 	width: 100%;
-	height: auto;
+	overflow: auto;
 }
 #banner-img {
 	min-width: 1000px;
