@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'tangxi_websit.urls'
+ROOT_URLCONF = 'tangxi_website.urls'
 
 TEMPLATES = [
     {
