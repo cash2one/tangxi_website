@@ -1,0 +1,51 @@
+{% extends "includes/base_info_page.html"%}
+
+{% block main %}
+<div id="banner-img">
+	<img src="/static/tangxi_webapp/img/{{banner_img}}" alt="">
+</div>
+<div id="info_block">
+	<div class="centered-body">
+		<div id="service-menu">
+			<h4><span class="en">Services</span>特色服务</h4>
+			<ul>
+				<li {% ifequal service_display_name '足疗按摩' %} class="active-menu" {% endifequal %}>
+					<a href="/services/foot_massage/">足疗</a>
+					{% ifequal service_display_name '足疗按摩' %} <b class="active-menu-caret"></b>{% endifequal %}
+				</li>
+				<li {% ifequal service_display_name 'SPA' %} class="active-menu" {% endifequal %}>
+					<a href="/services/spa/">SPA</a>
+					{% ifequal service_display_name 'SPA' %} <b class="active-menu-caret"></b>{% endifequal %}
+				</li>
+				<li {% ifequal service_display_name '棋牌' %} class="active-menu" {% endifequal %}>
+					<a href="/services/card/">棋牌</a>
+					{% ifequal service_display_name '棋牌' %} <b class="active-menu-caret"></b>{% endifequal %}
+				</li>
+				<li {% ifequal service_display_name '台球' %} class="active-menu" {% endifequal %}>
+					<a href="/services/billiard/">台球</a>
+					{% ifequal service_display_name '台球' %} <b class="active-menu-caret"></b>{% endifequal %}
+				</li>
+				<li {% ifequal service_display_name '茶道' %} class="active-menu" {% endifequal %}>
+					<a href="/services/tea/">茶道</a>
+					{% ifequal service_display_name '茶道' %} <b class="active-menu-caret"></b>{% endifequal %}
+				</li>
+			</ul>
+		</div>
+		<div class="info-container">
+			<h3>{{service_display_name}}</h3>
+			{% autoescape off %}
+				{{description}}
+			{% endautoescape %}
+			
+		</div>
+	</div>
+</div>
+<div id="bottom-img-slides">
+	<div class="centered-body">
+		{% for img in imgs %}
+			<div class="img-frame large-margin"><img src="/static/tangxi_webapp/img/{{img}}"/><p></p></div>
+		{% endfor %}
+		<div style="clear:both"></div>
+	</div>
+</div>
+{% endblock main %}

@@ -1,0 +1,46 @@
+{% extends "includes/base_info_page.html"%}
+
+{% block main %}
+<div id="banner-img">
+	<img src="/static/tangxi_webapp/img/banner_billiard.jpg" alt="">
+</div>
+<div id="info_block">
+	<div class="centered-body short-block">
+		
+		<h3>欢迎联系唐玺会馆！</h3>
+		<p><span>QQ:</span> 2721402683@qq.com </p>
+		<p><span>联系电话：</span>010-52016652</p>
+		<p><span>邮编：</span>100024</p>
+		<p><span>地址：</span>北京市朝阳区管庄杨闸环岛西北角地下</p>
+		<p><span>电子邮箱：</span><a href="mailto:#">tangxihuiguan@qq.com</a></p>
+		
+	</div>
+</div>
+<div id="contact-block">
+	<div class="centered-body">
+		<div id="map-block">
+			<a href="http://api.map.baidu.com/marker?location=39.918413508517,116.60548695925&title=购物&content=中百世贸杨闸环岛店&output=html">
+			  	<!--<img src="http://api.map.baidu.com/staticimage?width=400&height=250&center=116.605759,39.918203&zoom=16&markers=116.605508,39.918382&markerStyles=m,A,0xfff000" /-->
+			  	<img src="/static/tangxi_webapp/img/map.jpg" />
+  				<p>点击查看地图</p>
+  			</a>
+		</div>
+		<div id="contact-form">
+			<h4>给我们留言</h4>
+			<form action="/contact/" method="post">
+			{% csrf_token %}
+				<fieldset>
+					<label for="name">姓名</label>
+					<input type="text" id="name" name='name' placeholder="您的尊姓大名"/>
+					<label for="contact">联系方式</label>
+					<input type="text" id="contact" name='contact' placeholder="您的联系方式（邮箱，电话）"/>
+					<label for="message">留言</label>
+					<textarea id="message" name='message' rows="4" cols="50" placeholder="您的宝贵意见或反馈" ></textarea>
+					<br/>	
+					<input type="submit" value="发送"/>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock main %}

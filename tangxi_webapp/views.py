@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*- 
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator,InvalidPage,EmptyPage,PageNotAnInteger
-from tangxi_webapp.models import *
+from .models import *
 from tangxi_website.settings import *
 from django.core.context_processors import csrf
 from django.core.mail import send_mail
@@ -23,12 +23,12 @@ def show_enter_page(request):
 	/
 	a beatiful entrance page
 	'''
-	return render_to_response('home.html',{})
+	return render(request, 'tangxi_webapp/home.html',{})
 
 def show_home_page(request):
 	'''
 	'''
-	return render_to_response('home.html',{'active_menu':'/home/'})
+	return render(request, 'tangxi_webapp/home.html',{'active_menu':'/home/'})
 
 def show_news_page(request, page_number=1):
 	'''
@@ -43,14 +43,14 @@ def show_news_page(request, page_number=1):
 		'page':page,
 		'paginator':p
 	}
-	return render_to_response('news.html', context)
+	return render(request, 'tangxi_webapp/news.html', context)
 
 #id is numeric
 def show_news_detail_page(request, news_id):
 	'''
 	'''
 	news_detail = get_object_or_404(Activity, id=news_id)
-	return render_to_response('news_detail.html',{'active_menu':'/news/', 'news_detail':news_detail})
+	return render(request, 'tangxi_webapp/news_detail.html',{'active_menu':'/news/', 'news_detail':news_detail})
 
 def show_company_culture_page(request):
 	'''
@@ -62,7 +62,7 @@ def show_company_culture_page(request):
 		'img_url':img_url,
 		'imgs':imgs
 	}
-	return render_to_response('company_culture.html', context)
+	return render(request, 'tangxi_webapp/company_culture.html', context)
 
 service_dictionary = {}
 service_dictionary['foot_massage'] = u'足疗按摩'
@@ -77,7 +77,7 @@ def show_services_page(request, service_name=''):
 	img_url = ''
 	description = ''
 	if service_name == '':
-		return render_to_response('services.html',{'active_menu':'/services/'})
+		return render(request, 'tangxi_webapp/services.html',{'active_menu':'/services/'})
 	try:
 		img = Images.objects.get(title=service_name)
 		img_url = MEDIA_URL + img.path.name
@@ -98,7 +98,7 @@ def show_services_page(request, service_name=''):
 		'banner_img':banner_img, 
 		'imgs':imgs
 	}
-	return render_to_response('services_detail.html', context)
+	return render(request, 'tangxi_webapp/services_detail.html', context)
 
 def show_contact_page(request):
 	'''
@@ -117,10 +117,10 @@ def show_contact_page(request):
 			[EMAIL_HOST_USER], # recipient_list
 		)
 		return HttpResponseRedirect('/thanks/')
-	return render_to_response('contact.html', c)
+	return render(request, 'tangxi_webapp/contact.html', c)
 
 def show_contact_thanks_page(request):
-	return render_to_response('thanks.html', {})
+	return render(request, 'tangxi_webapp/thanks.html', {})
 
 def show_join_us_page(request, page_number=1):
 	'''
@@ -134,12 +134,12 @@ def show_join_us_page(request, page_number=1):
 		'page':page,
 		'paginator':p
 	}
-	return render_to_response('join_us.html', context)
+	return render(request, 'tangxi_webapp/join_us.html', context)
 
 def show_example_page(request):
 	'''
 	'''
-	return render_to_response('example.html', {})
+	return render(request, 'tangxi_webapp/example.html', {})
 
 
 def show_about_page(request):
@@ -147,12 +147,12 @@ def show_about_page(request):
 	/about/
 	show the about page
 	'''
-	return render_to_response('about.html',{'active_menu':'/about/'}) 
+	return render(request, 'tangxi_webapp/about.html',{'active_menu':'/about/'}) 
 
 def show_photos_page(request):
 	'''
 	'''
-	return render_to_response('photos.html', {}) 
+	return render(request, 'tangxi_webapp/photos.html', {}) 
 
 #=======================================
 # Function API End Here.

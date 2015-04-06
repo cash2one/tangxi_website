@@ -1,0 +1,44 @@
+{% extends "includes/base_info_page.html"%}
+{% block main %}
+<div id="banner-img">
+	<img src="/static/tangxi_webapp/img/banner-stairway.jpg" alt="">
+</div>
+<div id="info_block">
+	<div class="centered-body long-block">
+		<div class="info-container long-block">
+			<ul>
+			{% for item in news %}
+			<li class="news-item">
+				<img src="/static/tangxi_webapp/img/default_news_thumb.png" alt="">
+				<p>{{ item.date }}</p>
+				<h4>{{ item.name }}</h4>
+				<p><a href="/news_detail/{{item.id}}">详情<b class="more-caret"></b></a></p>
+			</li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div id="page-list">
+			{% if page.has_previous %}
+				<a href="/news/{{ page.previous_page_number }}/"><span>上一页</span></a>
+			{% else %}
+				<span>上一页</span>
+			{% endif %}
+			
+			{% for p in paginator.page_range %}
+				{% ifequal p page.number %}
+					<span>{{p}}</span>
+				{% else %}
+					<a href="/news/{{p}}/"><span>{{p}}</span></a>
+				{% endifequal %}
+			{% endfor %}
+			<span>|</span>
+			{% if page.has_next %}
+				<a href="/news/{{ page.next_page_number }}/"><span>下一页</span></a>
+			{% else %}
+				<span>下一页</span>
+			{% endif %}
+			<span>第 {{ page.number }} 页</span> <span>共 {{ paginator.num_pages }} 页</span>
+		</div>
+	</div>
+</div>
+{% endblock main %}
