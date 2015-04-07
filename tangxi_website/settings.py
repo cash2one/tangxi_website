@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wangxi_website.wsgi.application'
+WSGI_APPLICATION = 'tangxi_website.wsgi.application'
 
 
 SQLITE_DB_PATH = BASE_DIR + '/tangxi_webapp/database/sqlite.db'
