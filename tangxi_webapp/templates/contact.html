@@ -2,7 +2,7 @@
 
 {% block main %}
 <div id="banner-img">
-	<img src="/static/tangxi_webapp/img/banner_billiard.jpg" alt="">
+	<img src="{%static 'tangxi_webapp/img/banner_billiard.jpg'%}" alt="">
 </div>
 <div id="info_block">
 	<div class="centered-body short-block">
@@ -21,7 +21,7 @@
 		<div id="map-block">
 			<a href="http://api.map.baidu.com/marker?location=39.918413508517,116.60548695925&title=购物&content=中百世贸杨闸环岛店&output=html">
 			  	<!--<img src="http://api.map.baidu.com/staticimage?width=400&height=250&center=116.605759,39.918203&zoom=16&markers=116.605508,39.918382&markerStyles=m,A,0xfff000" /-->
-			  	<img src="/static/tangxi_webapp/img/map.jpg" />
+			  	<img src="{%static 'tangxi_webapp/img/map.jpg'%}" />
   				<p>点击查看地图</p>
   			</a>
 		</div>

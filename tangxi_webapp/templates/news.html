@@ -1,7 +1,7 @@
 {% extends "includes/base_info_page.html"%}
 {% block main %}
 <div id="banner-img">
-	<img src="/static/tangxi_webapp/img/banner-stairway.jpg" alt="">
+	<img src="{% static 'tangxi_webapp/img/banner-stairway.jpg'%}" alt="">
 </div>
 <div id="info_block">
 	<div class="centered-body long-block">
@@ -9,7 +9,7 @@
 			<ul>
 			{% for item in news %}
 			<li class="news-item">
-				<img src="/static/tangxi_webapp/img/default_news_thumb.png" alt="">
+				<img src="{% static 'tangxi_webapp/img/default_news_thumb.png'%}" alt="">
 				<p>{{ item.date }}</p>
 				<h4>{{ item.name }}</h4>
 				<p><a href="/news_detail/{{item.id}}">详情<b class="more-caret"></b></a></p>
