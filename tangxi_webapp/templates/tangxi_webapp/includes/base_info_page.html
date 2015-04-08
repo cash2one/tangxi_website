@@ -7,20 +7,20 @@
 	<meta name="Keywords" content="足疗,SPA,台球,棋牌,茶艺,生活服务,娱乐">
 	<meta name="baidu-site-verification" content="VyivbJZ3dH" />
 	<TITLE> 唐玺会馆</TITLE>
-	{% include 'includes/css.html' %}
+	{% include 'tangxi_webapp/includes/css.html' %}
 </HEAD>
 <BODY>
 	<div id="top-panel">
 		<div class="centered-body">
 			<div id="logo"></div>
 			<div id="hot-line">服务热线：010-52016652</div>
-			<div id="navi">{% include 'includes/menu.html' %}</div>
+			<div id="navi">{% include 'tangxi_webapp/includes/menu.html' %}</div>
 		</div>
 	</div>
-	<div id="main">{% block main %}{% endblock %}</div>
-	{% include 'includes/footer.html' %}
-	{% include 'includes/baidu_statistic.html' %}
-	{% include "includes/js.html" %}
+	<div id="main">{% block main %} {% load staticfiles %} {% endblock %}</div>
+	{% include 'tangxi_webapp/includes/footer.html' %}
+	{% include 'tangxi_webapp/includes/baidu_statistic.html' %}
+	{% include "tangxi_webapp/includes/js.html" %}
 	{% block script %} {% endblock %}
 </BODY>
 </HTML>

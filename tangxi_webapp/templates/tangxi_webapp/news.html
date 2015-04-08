@@ -1,26 +1,26 @@
-{% extends "includes/base_info_page.html"%}
+{% extends "tangxi_webapp/includes/base_info_page.html"%}
 {% block main %}
+{% load staticfiles %}
 <div id="banner-img">
-	<img src="{%static 'tangxi_webapp/img/banner-stairway.jpg'%}" alt="">
+	<img src="{% static 'tangxi_webapp/img/banner-stairway.jpg'%}" alt="">
 </div>
 <div id="info_block">
 	<div class="centered-body long-block">
 		<div class="info-container long-block">
-			<h3>唐玺会馆招聘信息</h3>
 			<ul>
-			{% for job in jobs %}
-			<li>
-			<p>{{job.title}} {{ job.quantity }}名:</p>
-			<p>发布日期： {{ job.date }} </p>
-			<p>要求：{{ job.description}} </p>
-			<br/>
+			{% for item in news %}
+			<li class="news-item">
+				<img src="{% static 'tangxi_webapp/img/default_news_thumb.png'%}" alt="">
+				<p>{{ item.date }}</p>
+				<h4>{{ item.name }}</h4>
+				<p><a href="/news_detail/{{item.id}}">详情<b class="more-caret"></b></a></p>
 			</li>
 			{% endfor %}
 			</ul>
 		</div>
 		<div id="page-list">
 			{% if page.has_previous %}
-				<a href="/join_us/{{ page.previous_page_number }}/"><span>上一页</span></a>
+				<a href="/news/{{ page.previous_page_number }}/"><span>上一页</span></a>
 			{% else %}
 				<span>上一页</span>
 			{% endif %}
@@ -29,12 +29,12 @@
 				{% ifequal p page.number %}
 					<span>{{p}}</span>
 				{% else %}
-					<a href="/join_us/{{p}}/"><span>{{p}}</span></a>
+					<a href="/news/{{p}}/"><span>{{p}}</span></a>
 				{% endifequal %}
 			{% endfor %}
 			<span>|</span>
 			{% if page.has_next %}
-				<a href="/join_us/{{ page.next_page_number }}/"> <span>下一页</span></a>
+				<a href="/news/{{ page.next_page_number }}/"><span>下一页</span></a>
 			{% else %}
 				<span>下一页</span>
 			{% endif %}
