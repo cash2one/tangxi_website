@@ -79,10 +79,11 @@ Layout
 	height: auto;
 	overflow: auto;
 }
-#homepage-banner img {
-	
+#homepage-banner .item {
 	width: 100%;
-	overflow: auto;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
 }
 #banner-img {
 	min-width: 1000px;
