@@ -4,28 +4,26 @@
 {% load staticfiles %}
 <div id="homepage-banner" class="carousel slide" data-ride="carousel">
 	<div class="carousel-inner">
-		<div class="item active"><img src="{%static 'tangxi_webapp/img/tangxi1.jpg'%}" alt></div>
-		<div class="item"><img src="{%static 'tangxi_webapp/img/tangxi2.jpg'%}" alt></div>
-		<div class="item"><img src="{%static 'tangxi_webapp/img/tangxi3.jpg'%}" alt></div>
+		<div class="item active" style="background-image: url({%static 'tangxi_webapp/img/tangxi1.jpg'%});"></div>
+		<div class="item" style="background-image: url({%static 'tangxi_webapp/img/tangxi2.jpg'%});"></div>
+		<div class="item"  style="background-image: url({%static 'tangxi_webapp/img/tangxi3.jpg'%});"></div>
 	</div>
 </div>
-
 {% endblock main %}
 {% block script %}
 <script>
     $('.carousel').carousel({
-    	interval: 5000
+    	interval: 5000,
     	wrap: true
-    })
-</script>
-<script>
-	$(document).ready(function(){
-		$("body").height($(window).height());
-		$("#homepage-banner img").height($("body").height()-$("#top-panel").height()-$("#footer").height());
-		setInterval(function(){
-			$("body").height($(window).height());
-			$("#homepage-banner img").height($("body").height()-$("#top-panel").height()-$("#footer").height());
-		},500);
+    });
+    function resize() {
+        $("body").height($(window).height());
+        var height = $("body").height()-$("#top-panel").height()-$("#footer").height();
+        $("#homepage-banner .carousel-inner").height(height);
+    }
+	$(function(){
+		resize();
+		setInterval(resize,500);
 	});
 </script>
 {% endblock script %}

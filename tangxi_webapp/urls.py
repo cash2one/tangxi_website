@@ -1,5 +1,7 @@
 from django.conf.urls import url
+from django.conf.urls.static import static
 from . import views
+from tangxi_website.settings import *
 urlpatterns = [
     url(r'^$', views.show_enter_page, name='show_enter_page'),
     url(r'^home/$', views.show_home_page, name='show_home_page'),
@@ -16,4 +18,6 @@ urlpatterns = [
     url(r'^join_us/(?P<page_number>\d+)/$', views.show_join_us_page, name='show_join_us_page'),
     url(r'^join_us/$', views.show_join_us_page, name='show_join_us_page'),
     #url(r'^photos/$', 'show_photos_page'),
-]  
+]
+if DEBUG:
+    urlpatterns = urlpatterns + static(STATIC_URL, document_root=STATIC_ROOT)

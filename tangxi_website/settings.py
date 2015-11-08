@@ -91,7 +91,7 @@ DATABASES = {
 
 TIME_ZONE = 'Asia/Shanghai'
 LANGUAGE_CODE = 'zh-hans'
-
+DEFAULT_CHARSET = 'utf-8'
 USE_I18N = True
 
 USE_L10N = True
@@ -102,11 +102,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT = os.path.join(BASE_DIR, "tangxi_webapp/static")
 STATIC_URL = '/static/'
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = os.path.join(os.path.dirname(__file__),"media")
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__),"tangxi_webapp/media")
 THUMBNAIL_DIR = os.path.join(MEDIA_ROOT,"thumbnails/")
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
