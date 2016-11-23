@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator,InvalidPage,EmptyPage,PageNotAnInteger
 from .models import *
 from tangxi_website.settings import *
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 from django.core.mail import send_mail
 import sys
 
