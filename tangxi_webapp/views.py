@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from django.http import HttpResponseRedirect
@@ -13,7 +13,7 @@ default_encoding = 'utf-8'
 if sys.getdefaultencoding() != default_encoding:
     reload(sys)
     sys.setdefaultencoding(default_encoding)
-		
+
 
 #=======================================
 # Function APIs:
@@ -84,7 +84,7 @@ def show_services_page(request, service_name=''):
 		service_profile = ServiceProfile.objects.get(name=service_name)
 		service_display_name = service_dictionary[service_name]
 		description = service_profile.description
-	except Images.DoesNotExist, ServiceProfile.DoesNotExist:
+	except:
 		pass
 	banner_img = "banner_%s.jpg" % (service_name)
 	imgs = []
@@ -95,7 +95,7 @@ def show_services_page(request, service_name=''):
 		'service_display_name': service_display_name,
 		'img_url':img_url,
 		'description':description,
-		'banner_img':banner_img, 
+		'banner_img':banner_img,
 		'imgs':imgs
 	}
 	return render(request, 'tangxi_webapp/services_detail.html', context)
@@ -147,12 +147,12 @@ def show_about_page(request):
 	/about/
 	show the about page
 	'''
-	return render(request, 'tangxi_webapp/about.html',{'active_menu':'/about/'}) 
+	return render(request, 'tangxi_webapp/about.html',{'active_menu':'/about/'})
 
 def show_photos_page(request):
 	'''
 	'''
-	return render(request, 'tangxi_webapp/photos.html', {}) 
+	return render(request, 'tangxi_webapp/photos.html', {})
 
 #=======================================
 # Function API End Here.
