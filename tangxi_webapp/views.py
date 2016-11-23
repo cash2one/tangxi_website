@@ -88,7 +88,7 @@ def show_services_page(request, service_name=''):
 		pass
 	banner_img = "banner_%s.jpg" % (service_name)
 	imgs = []
-	for x in xrange(1,4):
+	for x in range(1,4):
 		imgs.append("%s_%d.jpg" % (service_name, x))
 	context = {
 		'active_menu':'/services/',
